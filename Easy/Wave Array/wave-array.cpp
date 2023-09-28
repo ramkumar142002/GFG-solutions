@@ -13,14 +13,13 @@ class Solution{
     void convertToWave(int n, vector<int>& arr){
         
         // Your code here
-        int i=0;
-        while(i<n){
-            if(i==n-1) break;
-            int temp=arr[i];
-            arr[i]=arr[i+1];
-            arr[i+1]=temp;
-            i=i+2;
+        // int i=1;
+        vector<int> a;
+        for(int i=1;i<n;i=i+2){
+            if(i<n) a.push_back(arr[i]);
+            if(i-1<n) a.push_back(arr[i-1]);
         }
+        arr=a;
         
     }
 };
