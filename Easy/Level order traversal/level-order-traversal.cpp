@@ -46,19 +46,19 @@ class Solution
     {
       //Your code here
         queue<Node*> q;
-        vector<int> a;
+        vector<int> ans;
         q.push(node);
         while(!q.empty()){
-            int size=q.size();
-            for(int i=0;i<size;i++){
-                Node *x=q.front();
-                q.pop();
-                if(x->left!=NULL) q.push(x->left);
-                if(x->right!=NULL)  q.push(x->right);
-                a.push_back(x->data);
-            }  
+          int n=q.size();
+          for(int i=0;i<n;i++){
+            Node* a=q.front();
+            q.pop();
+            if(a->left!=NULL) q.push(a->left);
+            if(a->right!=NULL) q.push(a->right);
+            ans.push_back(a->data);
+          }
         }
-        return a;
+        return ans;
     }
 };
 
