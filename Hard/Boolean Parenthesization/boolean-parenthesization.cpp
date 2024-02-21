@@ -51,19 +51,20 @@ public:
     }
 };
 
+
 //{ Driver Code Starts.
 
 int main(){
     int t;
     cin>>t;
     while(t--){
-        int N;
-        cin>>N;
-        string S;
-        cin>>S;
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
         
         Solution ob;
-        cout<<ob.countWays(N, S)<<"\n";
+        cout<<ob.countWays(n, s)<<"\n";
     }
     return 0;
 }
