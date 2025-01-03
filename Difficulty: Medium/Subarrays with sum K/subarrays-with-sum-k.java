@@ -46,9 +46,10 @@ class Solution {
         HashMap<Integer,Integer> hs = new HashMap<>();
         int sum = 0;
         int count = 0;
+        hs.put(0,1);
         for(int i = 0;i<arr.length;i++){
             sum += arr[i];
-            if(sum == k) count++;
+            // if(sum == k) count++;
             if(hs.containsKey(sum-k)){
                 count += hs.get(sum-k);
             }
